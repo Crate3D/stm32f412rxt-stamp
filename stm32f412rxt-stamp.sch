@@ -733,14 +733,12 @@ Wire Wire Line
 	2500 5100 2700 5100
 NoConn ~ 2500 5500
 NoConn ~ 2500 5400
-Text GLabel 9850 3250 2    50   Input ~ 0
+Text GLabel 10650 3250 2    50   Input ~ 0
 USB_D+
 Text GLabel 9850 3150 2    50   Input ~ 0
 USB_D-
 Wire Wire Line
 	9850 3150 9600 3150
-Wire Wire Line
-	9850 3250 9600 3250
 $Comp
 L Device:R R2
 U 1 1 5DC08D0F
@@ -2004,4 +2002,27 @@ Wire Wire Line
 	3850 4050 3850 4450
 Wire Wire Line
 	3850 5450 3850 5650
+Wire Wire Line
+	9600 3250 10500 3250
+Text GLabel 10500 2700 1    50   Input ~ 0
+VDD
+$Comp
+L Device:R R5
+U 1 1 5E9EB012
+P 10500 2950
+F 0 "R5" H 10570 2996 50  0000 L CNN
+F 1 "1.5K" H 10570 2905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10430 2950 50  0001 C CNN
+F 3 "~" H 10500 2950 50  0001 C CNN
+F 4 "C25867" H 10500 2950 50  0001 C CNN "LCSC"
+	1    10500 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 2700 10500 2800
+Wire Wire Line
+	10500 3100 10500 3250
+Connection ~ 10500 3250
+Wire Wire Line
+	10500 3250 10650 3250
 $EndSCHEMATC
