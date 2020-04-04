@@ -719,71 +719,18 @@ Wire Wire Line
 	5450 7350 5450 7300
 Wire Wire Line
 	5450 7300 5600 7300
-$Comp
-L Power_Protection:NUP2202 U4
-U 1 1 5D54277C
-P 3200 5500
-F 0 "U4" H 3444 5546 50  0000 L CNN
-F 1 "NUP2114UCMR6T1G" H 3444 5455 50  0000 L CNN
-F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 3280 5575 50  0001 C CNN
-F 3 "http://www.onsemi.ru.com/pub_link/Collateral/NUP2202W1-D.PDF" H 3280 5575 50  0001 C CNN
-F 4 "C393373" H 3200 5500 50  0001 C CNN "LCSC"
-	1    3200 5500
-	1    0    0    -1  
-$EndComp
-Text GLabel 3450 5050 2    50   Input ~ 0
+Text GLabel 4500 5050 2    50   Input ~ 0
 USB_D+
-Text GLabel 3450 4850 2    50   Input ~ 0
+Text GLabel 4500 4850 2    50   Input ~ 0
 USB_D-
-Wire Wire Line
-	3450 4850 3200 4850
-Wire Wire Line
-	2700 4850 2700 4800
 Wire Wire Line
 	2700 4800 2500 4800
 Wire Wire Line
 	2500 4900 2700 4900
 Wire Wire Line
-	2700 4900 2700 4850
-Connection ~ 2700 4850
-Wire Wire Line
-	3450 5050 2950 5050
-Wire Wire Line
-	2700 5050 2700 5000
-Wire Wire Line
 	2700 5000 2500 5000
 Wire Wire Line
 	2500 5100 2700 5100
-Wire Wire Line
-	2700 5100 2700 5050
-Connection ~ 2700 5050
-$Comp
-L power:GND #PWR0125
-U 1 1 5D55F925
-P 3400 5700
-F 0 "#PWR0125" H 3400 5450 50  0001 C CNN
-F 1 "GND" H 3405 5527 50  0000 C CNN
-F 2 "" H 3400 5700 50  0001 C CNN
-F 3 "" H 3400 5700 50  0001 C CNN
-	1    3400 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 5500 3400 5700
-Wire Wire Line
-	2850 5500 3000 5500
-Wire Wire Line
-	3200 5700 2950 5700
-Wire Wire Line
-	2950 5700 2950 5050
-Connection ~ 2950 5050
-Wire Wire Line
-	2950 5050 2700 5050
-Wire Wire Line
-	3200 5300 3200 4850
-Connection ~ 3200 4850
-Wire Wire Line
-	3200 4850 2700 4850
 NoConn ~ 2500 5500
 NoConn ~ 2500 5400
 Text GLabel 9850 3250 2    50   Input ~ 0
@@ -1720,17 +1667,6 @@ Text GLabel 6450 1000 3    50   Input ~ 0
 PB15
 Text GLabel 6950 1000 3    50   Input ~ 0
 PB2-BOOT1
-$Comp
-L power:VBUS #PWR0124
-U 1 1 5DE10512
-P 2850 5500
-F 0 "#PWR0124" H 2850 5350 50  0001 C CNN
-F 1 "VBUS" H 2865 5673 50  0000 C CNN
-F 2 "" H 2850 5500 50  0001 C CNN
-F 3 "" H 2850 5500 50  0001 C CNN
-	1    2850 5500
-	1    0    0    -1  
-$EndComp
 Text GLabel 5850 1950 3    50   Input ~ 0
 NRST
 $Comp
@@ -2012,4 +1948,60 @@ F 4 "C25744" H 2650 3050 50  0001 C CNN "LCSC"
 	1    2650 3050
 	1    0    0    -1  
 $EndComp
+$Comp
+L Power_Protection:USBLC6-2SC6 U4
+U 1 1 5E8D2C9B
+P 3850 4950
+F 0 "U4" H 3850 5631 50  0000 C CNN
+F 1 "USBLC6-2SC6" H 3850 5540 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3100 5350 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 4050 5300 50  0001 C CNN
+F 4 "C7519" H 3850 4950 50  0001 C CNN "LCSC"
+	1    3850 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 5000 2700 5050
+Wire Wire Line
+	2700 4800 2700 4850
+Wire Wire Line
+	4500 4850 4350 4850
+Wire Wire Line
+	4500 5050 4350 5050
+Wire Wire Line
+	3350 5050 2700 5050
+Connection ~ 2700 5050
+Wire Wire Line
+	2700 5050 2700 5100
+Wire Wire Line
+	3350 4850 2700 4850
+Connection ~ 2700 4850
+Wire Wire Line
+	2700 4850 2700 4900
+$Comp
+L power:VBUS #PWR0124
+U 1 1 5E97A005
+P 3850 4050
+F 0 "#PWR0124" H 3850 3900 50  0001 C CNN
+F 1 "VBUS" H 3865 4223 50  0000 C CNN
+F 2 "" H 3850 4050 50  0001 C CNN
+F 3 "" H 3850 4050 50  0001 C CNN
+	1    3850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 5E97A6DB
+P 3850 5650
+F 0 "#PWR0125" H 3850 5400 50  0001 C CNN
+F 1 "GND" H 3855 5477 50  0000 C CNN
+F 2 "" H 3850 5650 50  0001 C CNN
+F 3 "" H 3850 5650 50  0001 C CNN
+	1    3850 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4050 3850 4450
+Wire Wire Line
+	3850 5450 3850 5650
 $EndSCHEMATC
