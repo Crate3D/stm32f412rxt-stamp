@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "STM32F412RxT Stamp rev.1"
+Title "STM32F412RxT Stamp rev.1.1-dev"
 Date ""
 Rev "rev.1"
 Comp "Crate3D"
